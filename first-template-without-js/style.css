@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: "Tajawal", sans-serif;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+/*media query for container */
+/*small*/
+
+@media (min-width:768px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+/*Medium*/
+@media (min-width:992px) {
+    .container{
+        max-width:970px;
+    }
+}
+
+/*Large*/
+@media (min-width:1200px) {
+    .container{
+        max-width: 1170px;
+    }  
+}
+
+/*end media query*/
+
+/* Start header*/
+.header{
+    padding: 20px;
+    background-color: #fff;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end   ;
+}
+
+.header .links ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 25px;
+}
+
+.header .links ul li a {
+    text-decoration: none;
+    display: block;
+    padding:0 10px;
+    color: black;
+    position: relative;
+    transition: all 0.3s linear;
+
+}
+
+.header .links ul li a:hover::before{
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-image: linear-gradient(to bottom, #ed0b6d, #f14c88,
+    #f270a1, #f18fb8, #f0abcb); 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: -220px;
+    right: 0px;
+    transform: rotate(-45deg);
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+.header .links .icon span:first-child{
+    height: 2px;
+    width: 70%;
+}
+.header .links .icon span:nth-child(2){
+    height: 2px;
+    width: 100%;
+    
+}
+.header .links .icon span:last-child{
+    height: 2px;
+    width: 70%;
+}
+
+@media (max-width:768px) {
+    .header .links ul {
+        display: none;  
+    }
+    .header .links .icon {
+       top:-14px;    
+       right: -18px;
+}
+
+
+}
+
+
+/* End header*/
+
+/*Start middle section*/
+.middle {
+    padding: 20px;
+}
+
+.middle .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.middle .container .left-section{
+     margin-left: 40px;
+    position: relative;
+}
+
+.middle .container .left-section::before{
+    content: " ";
+    width: 5px;
+    height: 120px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #ed0b6d, #f14c88,
+     #f270a1, #f18fb8, #f0abcb); 
+    top: 28px;
+    left: -18px;
+}
+
+.middle .container .left-section h1{
+   line-height: 1.1;
+   margin-bottom: -2px;
+    
+}
+
+.middle .container .left-section p{
+   font-size: 20px;
+   color: #777;
+   margin-bottom: -2px;
+ }
+
+ .middle .container .left-section span{
+    font-size: 12px;
+    color: #999;
+  }
+  .middle .container .left-section h6{
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .middle .container .left-section button{
+    display: block;
+    background-image: linear-gradient(to bottom, #ed0b6d, #f14c88, #f270a1, #f18fb8, #f0abcb);  
+    padding: 8px 35px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    transition: all 1.3s ease-in-out;
+  }
+
+  .middle .container .left-section button:hover {
+    width: 180px;
+    text-align: left;
+
+  }
+
+  .middle .container .left-section button:hover:after{
+    content:"" ;
+    width: 45px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background-color: white;
+    transform: translateY(-50%);
+  }
+
+  .middle .container .left-section button:hover::before{
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+
+  }
+
+  .middle .container .right-section {
+    position: relative;
+  }
+
+  .middle .container .right-section::before {
+    content: "";
+    width: 419px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #ed0b6d, #f14c88, #f270a1, #f18fb8, #f0abcb);    padding: 8px 30px;
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    right: -48px;
+    z-index: -1;
+  }
+
+  .middle .container .right-section .product-img {
+   display: flex;
+   align-items: center;
+   margin-right: 25px;
+   position: relative;
+}
+  .middle .container .right-section .product-img .product {
+      width: 500px;
+      margin-right: 50px;
+}
+
+.middle .container .right-section .product-img .add {
+    width: 40px;
+}
+.middle .container .right-section .product-img::before {
+    content: "Add to cart";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    color: white;
+    top: 190px;
+    text-align: center;
+    right: -30px;
+}
+ 
+@media (max-width:768px) {
+    .middle .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .middle .container .right-section{
+        order: -1;
+        margin-bottom: 80px;
+    }
+    .middle .container .right-section .product-img .product{
+        width: 200px;
+        margin-right: 40px;
+    }
+
+    .middle .container .right-section::before {
+        width: 200px;
+      }
+      .middle .container .right-section .product-img::before {
+            top: 100px;
+        
+    }
+    
+}
+/*End middle section*/
+
+/*Start Footer*/
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.footer ul {
+    width: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer ul li img {
+    width: 9px;
+    height: 11px;
+    }
+
+@media (max-width:768px) {
+    .footer {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    }
+/*End Footer*/
+
